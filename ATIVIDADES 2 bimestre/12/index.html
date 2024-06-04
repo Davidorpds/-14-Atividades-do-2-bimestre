@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <title>Formatador de Número</title>
+</head>
+<body>
+    <h1>Formatador de Número</h1>
+    <label for="numero">Digite um número inteiro de até três dígitos:</label>
+    <input type="number" id="numero" min="0" max="999"><br><br>
+    <button onclick="formatarNumero()">Formatar</button><br><br>
+    <p id="resultado"></p>
+
+    <script>
+        function formatarNumero() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var centena = Math.floor(numero / 100);
+            var dezena = Math.floor((numero % 100) / 10);
+            var unidade = numero % 10;
+            
+            document.getElementById("resultado").innerHTML = "CENTENA = " + centena + "<br>" +
+                                                              "DEZENA = " + dezena + "<br>" +
+                                                              "UNIDADE = " + unidade;
+        }
+    </script>
+</body>
+</html>

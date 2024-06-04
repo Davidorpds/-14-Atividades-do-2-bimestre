@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Câmbio</title>
+    <script>
+        function calcular() {
+     
+            var cotacaoAtual = parseFloat(document.getElementById("cotacao").value);
+            var aumento1 = cotacaoAtual * 1.01;
+            var aumento2 = cotacaoAtual * 1.02;
+            var aumento5 = cotacaoAtual * 1.05;
+            var aumento10 = cotacaoAtual * 1.10;
+            
+            document.getElementById("aumento1").innerHTML = aumento1.toFixed(2);
+            document.getElementById("aumento2").innerHTML = aumento2.toFixed(2);
+            document.getElementById("aumento5").innerHTML = aumento5.toFixed(2);
+            document.getElementById"aumento10").innerHTML = aumento10.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Câmbio</h1>
+    <label for="cotacao">Informe a cotação atual do dólar:</label>
+    <input type="number" id="cotacao" step="0.01">
+    <button onclick="calcular()">Calcular</button>
+
+    <h2>Valores com aumento:</h2>
+    <ul>
+        <li>Acréscimo de 1%: <span id="aumento1"></span></li>
+        <li>Acréscimo de 2%: <span id="aumento2"></span></li>
+        <li>Acréscimo de 5%: <span id="aumento5"></span></li>
+        <li>Acréscimo de 10%: <span id="aumento10"></span></li>
+    </ul>
+    <label for="cotacao">Informe a cotação atual do dólar:</label>
+    
+</body>
+</html>

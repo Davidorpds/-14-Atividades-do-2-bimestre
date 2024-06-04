@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Calculadora de Venda de Camisetas</title>
+</head>
+<body>
+    <h1>Calculadora de Venda de Camisetas</h1>
+    <label for="quantidadePequena">Quantidade de camisetas pequenas:</label>
+    <input type="number" id="quantidadePequena" min="0" step="1"><br><br>
+    <label for="quantidadeMedia">Quantidade de camisetas médias:</label>
+    <input type="number" id="quantidadeMedia" min="0" step="1"><br><br>
+    <label for="quantidadeGrande">Quantidade de camisetas grandes:</label>
+    <input type="number" id="quantidadeGrande" min="0" step="1"><br><br>
+    <button onclick="calcularValor()">Calcular</button><br><br>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularValor() {
+            var precoPequena = 10.00;
+            var precoMedia = 12.00;
+            var precoGrande = 15.00;
+            
+            var quantidadePequena = parseInt(document.getElementById("quantidadePequena").value);
+            var quantidadeMedia = parseInt(document.getElementById("quantidadeMedia").value);
+            var quantidadeGrande = parseInt(document.getElementById("quantidadeGrande").value);
+            
+            var valorTotal = (quantidadePequena * precoPequena) + (quantidadeMedia * precoMedia) + (quantidadeGrande * precoGrande);
+            
+            document.getElementById("resultado").innerHTML = "Valor arrecadado: R$" + valorTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

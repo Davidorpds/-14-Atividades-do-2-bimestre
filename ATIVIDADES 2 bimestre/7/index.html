@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Dias do Ano</title>
+</head>
+<body>
+    <h1>Calculadora de Dias do Ano</h1>
+    <label for="dia">Dia:</label>
+    <input type="number" id="dia" min="1" max="30" step="1">
+    <label for="mes">Mês:</label>
+    <input type="number" id="mes" min="1" max="12" step="1">
+    <button onclick="calcularDias()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDias() {
+            var dia = parseInt(document.getElementById("dia").value);
+            var mes = parseInt(document.getElementById("mes").value);
+            var diasDoMes = 30; // Considerando que todos os meses têm 30 dias
+            var diasPassados = (mes - 1) * diasDoMes + dia;
+            document.getElementById("resultado").innerHTML = "Dias passados desde o início do ano: " + diasPassados;
+        }
+    </script>
+</body>
+</html>
